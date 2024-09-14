@@ -16,6 +16,7 @@ const ProductAdmin = () => {
     const fetchItems = async () => {
         try {
             const { data } = await getItems();
+            console.log(data);
             setItems(data);
         } catch (error) {
             toast.error("Failed to fetch items.", {
